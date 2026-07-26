@@ -3,6 +3,7 @@ package com.example.customkeyboard.ui
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.gestures.detectDragGestures
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
@@ -179,7 +180,7 @@ private fun EditableKey(
                 }
             }
             .pointerInput(key.id) {
-                androidx.compose.foundation.gestures.detectTapGestures(onTap = { onTap() })
+                detectTapGestures(onTap = { onTap() })
             },
         contentAlignment = Alignment.Center
     ) {
